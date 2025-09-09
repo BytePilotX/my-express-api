@@ -5,10 +5,11 @@
 
 const express = require('express');
 const apitestingJS = require('./apitesting')
+const ipgrabber = require('./ipScanning');
 
 const app = express();
 
-const PORT = 3000;
+const PORT = 8080;
 
 let userDataArray = [];
 
@@ -16,8 +17,14 @@ app.use( express.json() )
 
 app.listen(
     PORT,
-    () => console.log(`Its alive on http://localhost:${PORT}`)
+    message()
 );
+
+async function message() {
+    console.log("Alive");
+    let ipAddr = await ipgrabber.grabIP()
+    console.log(await ipAddr['ip'] + `:${PORT}`);
+}
 
 app.get('/help', (req,res) => {
     res.status(200).send({
@@ -124,3 +131,4 @@ function scanArrayForExistingValues(name,age) {
 
     }
 }
+

@@ -1,0 +1,14 @@
+const URI = 'https://ipinfo.io/json?token=71edab701720af';
+async function grabIP() {
+    try {
+        const response = await fetch(URI);
+        const data = response.json();
+        return await data;
+    } catch (error) {
+        return error;
+    } finally {
+        console.log("Ip function complete");
+    };
+}
+
+module.exports = { grabIP };
