@@ -9,7 +9,7 @@ const ipgrabber = require('./ipScanning');
 
 const app = express();
 
-const PORT = 80;
+const PORT = 222;
 
 let userDataArray = [];
 
