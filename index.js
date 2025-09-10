@@ -6,10 +6,11 @@ console.log("Starting backend...");
 const express = require('express');
 const apitestingJS = require('./apitesting')
 const ipgrabber = require('./ipScanning');
+require('dotenv').config();
 
 const app = express();
 
-const PORT = 8080;
+const PORT = process.env.PORT;
 
 let userDataArray = [];
 
