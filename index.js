@@ -29,7 +29,7 @@ async function message() {
 
 app.get('/help', (req,res) => {
     res.status(200).send({
-        options: "To see all availible commands go see the github README at: https://github.com/bytepilotx/my-express-api"
+        options: "To see all available commands go see the github README at: https://github.com/bytepilotx/my-express-api"
     })
 })
 
