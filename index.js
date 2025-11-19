@@ -1,6 +1,6 @@
 /*
     If you are complexed as to why some console.log() statements
-    are commented out its because they are for debugging :O
+    are commented out its because they are for debugging
 */
 console.log("Starting backend...");
 const express = require('express');
